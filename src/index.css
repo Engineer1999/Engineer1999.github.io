@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-apple-white text-apple-gray-900 font-sans antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-medium tracking-tight;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@layer components {
+  .reveal {
+    @apply opacity-0 transition-all duration-1000 ease-out;
+    transform: translateY(30px);
+  }
+
+  .reveal.active {
+    @apply opacity-100;
+    transform: translateY(0);
+  }
+
+  .typing-container {
+    @apply relative overflow-hidden;
+    width: fit-content;
+  }
+
+  .typing-text {
+    @apply overflow-hidden whitespace-nowrap border-r-4 border-apple-blue-600;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  /* Skill bar animation */
+  .skill-bar {
+    @apply relative h-1.5 bg-apple-gray-200 rounded-full overflow-hidden;
+  }
+
+  .skill-progress {
+    @apply absolute h-full left-0 top-0 bg-apple-blue-600 rounded-full;
+    transition: width 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-apple-blue-600 text-apple-white py-3 px-6 rounded-full hover:bg-apple-blue-700 transition-colors duration-300;
+  }
+
+  .btn-outline {
+    @apply border border-apple-blue-600 text-apple-blue-600 py-3 px-6 rounded-full hover:bg-apple-blue-600/5 transition-colors duration-300;
+  }
+
+  /* Card styles */
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-apple-md;
+  }
+
+  /* Section styles */
+  .section {
+    @apply py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto scroll-mt-20;
+  }
+
+  /* Timeline styles */
+  .timeline {
+    @apply relative border-l border-apple-gray-200 ml-4 pl-8 py-4;
+  }
+
+  .timeline-dot {
+    @apply absolute left-[-4.5px] w-2 h-2 rounded-full bg-apple-blue-600;
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    @apply relative overflow-hidden;
+    height: 450px;
+  }
+
+  .parallax-bg {
+    @apply absolute top-0 left-0 w-full h-[120%] bg-center bg-cover;
+    transform: translateZ(0);
+    transition: transform 0.2s ease-out;
+  }
+  
+  /* Apple-inspired components */
+  .apple-card {
+    @apply bg-apple-white rounded-2xl shadow-apple-md p-6 transition-all duration-300;
+  }
+  
+  .apple-input {
+    @apply px-4 py-3 rounded-lg border border-apple-gray-300 bg-apple-gray-50 focus:outline-none focus:ring-2 focus:ring-apple-blue-600 focus:border-transparent transition-all;
+  }
+  
+  .apple-nav-link {
+    @apply text-apple-gray-800 hover:text-apple-blue-600 transition-colors font-medium text-sm tracking-wide;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-apple-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-apple-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-apple-gray-400;
+}
