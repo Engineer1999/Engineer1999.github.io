@@ -77,7 +77,7 @@ const Hero = () => {
           <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-technology-and-science-slides-9033-large.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      </div>
+      </div>ƒ
 
       <div className="container mx-auto px-6 relative z-20 text-center">
         <div

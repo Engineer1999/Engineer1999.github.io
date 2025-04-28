@@ -50,7 +50,7 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-apple-gray-900/70 to-transparent flex flex-col justify-end p-8 text-apple-white">
                 <h3 className="text-xl font-medium mb-2">Bhargav Patel</h3>
-                <p className="text-sm font-light">ML Engineer with 4+ years of experience</p>
+                <p className="text-sm font-light">ML Engineer & AI Specialist</p>
               </div>
             </div>
 
@@ -66,26 +66,12 @@ const About = () => {
                 <Book className="w-5 h-5 mr-3 text-apple-blue-600" />
                 <div>
                   <h4 className="font-medium text-sm">Education</h4>
-                  <p className="text-apple-gray-800">MSc. Data Science</p>
+                  <p className="text-apple-gray-800">B.Tech Computer Science</p>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="flex flex-col justify-center">
-            <h3 className="text-2xl font-medium mb-6 reveal">Who I am</h3>
-            <p className="mb-6 reveal text-apple-gray-800 leading-relaxed">
-              I'm a Machine Learning Engineer with a passion for building intelligent systems that solve real-world problems.
-              With over 4 years of experience in the field, I specialize in developing and deploying ML models that drive 
-              business value through data-driven insights.
-            </p>
-            <p className="mb-8 reveal text-apple-gray-800 leading-relaxed">
-              My expertise spans across computer vision, natural language processing, and predictive analytics. 
-              I thrive in collaborative environments where I can leverage my technical skills to transform complex data 
-              into actionable intelligence.
-            </p>
-
-            <h3 className="text-2xl font-medium mb-6 reveal">Connect With Me</h3>
+            
+            <h3 className="text-2xl font-medium mb-6 mt-8 reveal">Connect With Me</h3>
             <div className="grid grid-cols-2 gap-3 md:gap-4 reveal">
               <a 
                 href="https://www.linkedin.com/in/bhargav-p-patel" 
@@ -128,6 +114,22 @@ const About = () => {
                 <span className="text-apple-gray-800 text-sm">X/Twitter</span>
               </a>
             </div>
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <h3 className="text-2xl font-medium mb-6 reveal">Who I am</h3>
+            <p className="mb-4 reveal text-apple-gray-800 leading-relaxed">
+              Bhargav is a seasoned Machine Learning Engineer and AI specialist with extensive experience across the machine learning solutions lifecycle. Currently, at Fractal Analytics, he architects and implements end-to-end ML pipelines using GCP services like Dataproc, Apache Spark, and BigQuery to deliver scalable, reliable data solutions.
+            </p>
+            <p className="mb-4 reveal text-apple-gray-800 leading-relaxed">
+              Previously, as Junior Staff AI Engineer at Detect Technologies, Bhargav specialized in developing cutting-edge software engineering and MLOps products, leveraging Python, TensorFlow, Kubernetes, and AWS to build scalable applications with deep learning at their core.
+            </p>
+            <p className="mb-4 reveal text-apple-gray-800 leading-relaxed">
+              At Truminds Software System, he led various machine learning initiatives, including computer vision model benchmarking and AI-OPS platform development, using technologies like PyTorch, ONNX, Docker, Apache Kafka, TensorRT, and AWS.
+            </p>
+            <p className="mb-6 reveal text-apple-gray-800 leading-relaxed">
+              A passionate advocate for knowledge sharing in AI and machine learning, Bhargav frequently speaks at industry events, mentors at hackathons, and has published three research papers at international conferences.
+            </p>
           </div>
         </div>
       </div>
